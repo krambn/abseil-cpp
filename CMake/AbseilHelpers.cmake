@@ -46,7 +46,7 @@ function(absl_library)
   set(_NAME ${ABSL_LIB_TARGET})
   string(TOUPPER ${_NAME} _UPPER_NAME)
 
-  add_library(${_NAME} STATIC ${ABSL_LIB_SOURCES})
+  add_library(${_NAME} SHARED ${ABSL_LIB_SOURCES})
 
   target_compile_options(${_NAME} PRIVATE ${ABSL_COMPILE_CXXFLAGS} ${ABSL_LIB_PRIVATE_COMPILE_FLAGS})
   target_link_libraries(${_NAME} PUBLIC ${ABSL_LIB_PUBLIC_LIBRARIES})
